@@ -18,13 +18,19 @@ namespace RotateImages
             Image img = null;
             using (FileStream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read))
             {
-                try { img = Image.FromStream(stream);  }
-                catch { return; }
+                try { img = Image.FromStream(stream); }
+                catch { }
+                finally { stream.Close(); }
             }
             if (img != null)
             {
-                img.RotateFlip(rft);
-                img.Save(filepath);
+                try
+                {
+                    img.RotateFlip(rft);
+                    img.Save(filepath);
+                }
+                catch { }
+                finally { img.Dispose(); }
             }
         }
 
@@ -53,24 +59,24 @@ namespace RotateImages
             var dialogResult = folderDialog.ShowDialog();
             if (dialogResult == CommonFileDialogResult.Cancel || dialogResult == CommonFileDialogResult.None) { Console.WriteLine("Error schoose folder...Enter to exit"); Console.ReadLine(); }
 
-           
             foreach (var folderItem in folderDialog.FileNames)
             {
-                var imgFiles = Directory.GetFiles(folderItem, "*.*", SearchOption.AllDirectories);
-                Console.Write("Rotating " + folderItem + " | [");
+                var imgFiles = Directory.GetFiles(folderItem, "*", SearchOption.AllDirectories);
+                Console.Write(String.Format("Rotating {0} | ", folderItem));
                 var startXPos = Console.CursorLeft;
 
                 var imgRotateIter = 1;
                 foreach (var imgItem in imgFiles)
                 {
                     RotateImageFile(imgItem, rotateAngle);
-                    Console.Write(imgRotateIter + "/" + imgFiles.Length + "] " + Path.GetFileName(imgItem));
+                    Console.Write(String.Format("[{0}/{1}] {2}", imgRotateIter, imgFiles.Length, Path.GetFileName(imgItem)));
                     imgRotateIter++;
                     Console.CursorLeft = startXPos;
                 }
-                Console.WriteLine(" Done!");
+                Console.WriteLine();
             }
-
+            Console.WriteLine("Rotate is complite. Enter to exit");
+            Console.ReadLine();
         }
     }
 }

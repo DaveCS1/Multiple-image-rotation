@@ -73,4 +73,8 @@
     <EmbeddedResource Include="dll\Microsoft.WindowsAPICodePack.ShellExtensions.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>md $(ProjectDir)\exe
+copy $(TargetPath) $(ProjectDir)\exe</PostBuildEvent>
+  </PropertyGroup>
 </Project>

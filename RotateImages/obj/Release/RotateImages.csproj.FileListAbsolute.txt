@@ -1,0 +1,12 @@
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\RotateImages.exe.config
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\RotateImages.exe
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\RotateImages.pdb
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\Microsoft.WindowsAPICodePack.Sensors.dll
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\obj\Release\RotateImages.csprojResolveAssemblyReference.cache
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\obj\Release\RotateImages.csproj.CoreCompileInputs.cache
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\obj\Release\RotateImages.exe
+C:\Users\bomba\Source\Repos\Multiple-image-rotation\RotateImages\obj\Release\RotateImages.pdb
