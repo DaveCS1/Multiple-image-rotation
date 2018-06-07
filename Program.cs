@@ -30,7 +30,7 @@ namespace RotateImages
                     img.Save(filepath);
                 }
                 catch { }
-                finally { img = null; }
+                finally { img.Dispose(); }
             }
         }
 
